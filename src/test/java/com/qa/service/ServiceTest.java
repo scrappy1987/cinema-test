@@ -8,7 +8,7 @@ import com.qa.model.Movie;
 public class ServiceTest {
 
 	@Test
-	public void test() {
+	public void findCountByGenre() {
 		Service service = new Service();
 		Movie rambo = new Movie("rambo", "action", "15");
 		Movie harryPotter = new Movie("harrypotter", "fantasy", "12");
@@ -21,5 +21,4 @@ public class ServiceTest {
 		int count = service.findMovieByGenre("horror");
 		Assert.assertEquals(2, count);
 	}
-
 }
