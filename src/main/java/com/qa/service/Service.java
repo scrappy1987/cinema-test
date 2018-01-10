@@ -18,6 +18,14 @@ public class Service {
 		movieMap.put(count, aMovie);
 	}
 
+	public Map<Integer, Movie> getMovieMap() {
+		return movieMap;
+	}
+
+	public void setMovieMap(Map<Integer, Movie> movieMap) {
+		this.movieMap = movieMap;
+	}
+
 	public void deleteMovie(int movieToDelete) {
 		movieMap.remove(movieToDelete);
 	}
