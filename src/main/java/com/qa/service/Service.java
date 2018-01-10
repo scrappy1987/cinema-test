@@ -7,6 +7,15 @@ import com.qa.model.Movie;
 
 public class Service {
 	private Map<Integer, Movie> movieMap;
+	
+	public Map<Integer, Movie> getMovieMap() {
+		return movieMap;
+	}
+
+	public void setMovieMap(Map<Integer, Movie> movieMap) {
+		this.movieMap = movieMap;
+	}
+
 	private static int count = 0;
 
 	public Service() {
