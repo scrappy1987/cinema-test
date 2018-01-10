@@ -21,4 +21,12 @@ public class Service {
 	public void deleteMovie(int movieToDelete) {
 		movieMap.remove(movieToDelete);
 	}
+
+	public Map<Integer, Movie> getMovieMap() {
+		return movieMap;
+	}
+
+	public void setMovieMap(Map<Integer, Movie> movieMap) {
+		this.movieMap = movieMap;
+	}
 }
