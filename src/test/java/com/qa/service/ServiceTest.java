@@ -1,11 +1,14 @@
-package com.qa.main;
+package com.qa.service;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 import com.qa.model.Movie;
-import com.qa.service.Service;
 
-public class Main {
+public class ServiceTest {
 
-	public static void main(String[] args) {
+	@Test
+	public void test() {
 		Service service = new Service();
 		Movie rambo = new Movie("rambo", "action", "15");
 		Movie harryPotter = new Movie("harrypotter", "fantasy", "12");
@@ -16,7 +19,7 @@ public class Main {
 		service.addMovie(it);
 		service.addMovie(carrie);
 		int count = service.findMovieByGenre("horror");
-		System.out.println("The value of count is " + count);
+		Assert.assertEquals(2, count);
 	}
 
 }
